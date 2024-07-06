@@ -1,0 +1,41 @@
+<div class="digits-container">
+  <div class="digit-wrapper" *ngFor="let digit of allDigits; let i = index">
+    <div class="digit">
+      <div
+        class="segment top horizontal"
+        [ngClass]="{ segment: segments[digit][0], off: !segments[digit][0] }"
+      ></div>
+      <div
+        class="segment middle horizontal"
+        [ngClass]="{ segment: segments[digit][1], off: !segments[digit][1] }"
+      ></div>
+      <div
+        class="segment bottom horizontal"
+        [ngClass]="{ segment: segments[digit][2], off: !segments[digit][2] }"
+      ></div>
+      <div
+        class="segment top-left vertical"
+        [ngClass]="{ segment: segments[digit][3], off: !segments[digit][3] }"
+      ></div>
+      <div
+        class="segment top-right vertical"
+        [ngClass]="{ segment: segments[digit][4], off: !segments[digit][4] }"
+      ></div>
+      <div
+        class="segment bottom-left vertical"
+        [ngClass]="{ segment: segments[digit][5], off: !segments[digit][5] }"
+      ></div>
+      <div
+        class="segment bottom-right vertical"
+        [ngClass]="{ segment: segments[digit][6], off: !segments[digit][6] }"
+      ></div>
+    </div>
+    <span
+      *ngIf="i == this.firstColonIndex || i == this.secondColonIndex - 1"
+      class="separator"
+    >
+      :
+    </span>
+  </div>
+  <div class="meridiem">{{ meridiem }}</div>
+</div>

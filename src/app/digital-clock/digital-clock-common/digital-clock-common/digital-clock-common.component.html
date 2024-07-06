@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html class="page-container" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body class="main-page">
+    <div class="clock-container">
+      <div class="clock-wrapper">
+        <div class="clock-fragments">
+          <app-digital-clock-base
+            ngSkipHydration
+            [timeFormatOption]="'hh:mm:ss:tt'"
+            (onClockUpdate)="getCurrentTime($event)"
+          >
+          </app-digital-clock-base>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

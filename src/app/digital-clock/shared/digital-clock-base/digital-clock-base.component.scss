@@ -1,0 +1,107 @@
+.digital-clock {
+    display: flex;
+    flex-direction: row;
+  
+    .digit {
+      display: flex;
+      flex-wrap: wrap;
+      width: 20px;
+      height: 40px;
+      margin: 0 2px;
+  
+      .segment {
+        width: 18px;
+        height: 4px;
+        margin: 1px;
+        &.on {
+          background: black;
+        }
+      }
+    }
+  }
+
+.separator {
+      font-size: 50px;
+}
+
+.digits-container {
+    display: flex;
+}
+
+.digit {
+    width: 100px;
+    height: 200px;
+    position: relative;
+    margin: 20px;
+}
+
+.segment {
+    position: absolute;
+    width: 20px;
+    height: 80px;
+    background-color: black;
+    transition: opacity 0.3s ease;
+}
+
+.segment.off {
+    opacity: 0; 
+}
+
+.segment.horizontal {
+    width: 80px;
+    height: 20px;
+}
+
+// Horizontal segments 
+.segment.top {
+    top: 0;
+    left: 10px;
+}
+
+.segment.middle {
+    top: 90px;
+    left: 10px;
+}
+
+.segment.bottom {
+    bottom: 0;
+    left: 10px;
+}
+
+// Vertical segments 
+.segment.vertical {
+    width: 20px;
+    height: 80px;
+}
+
+.segment.top-left {
+    top: 10px;
+    left: 0;
+}
+
+.segment.top-right {
+    top: 10px;
+    right: 0;
+}
+
+.segment.bottom-left {
+    bottom: 10px;
+    left: 0;
+}
+
+.segment.bottom-right {
+    bottom: 10px;
+    right: 0;
+}
+
+.meridiem {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.digit-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
